@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow Nav Menu - RGB Controller</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+</head>
+
+<body>
+
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-gear"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+        </ul>
+    </nav>
+
+    <div class="rgb-controller">
+        <div class="slider-group">
+            <label for="red-slider">R</label>
+            <input type="range" id="red-slider" min="0" max="255" value="0">
+        </div>
+        <div class="slider-group">
+            <label for="green-slider">G</label>
+            <input type="range" id="green-slider" min="0" max="255" value="238">
+        </div>
+        <div class="slider-group">
+            <label for="blue-slider">B</label>
+            <input type="range" id="blue-slider" min="0" max="255" value="255">
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>

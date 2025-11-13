@@ -1,0 +1,152 @@
+ /* CSS Variables - Inhein JS se control kiya jayega */
+ :root {
+     --nav-bg: #33424e;
+     /* Nav ka background color */
+     --nav-glow: #0ef;
+     /* Glow aur border ka color */
+     --icon-color: #0ef;
+     /* Icon ka color */
+ }
+
+ /* Basic Setup */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: sans-serif;
+     background-color: #111;
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 40px;
+     /* Nav aur controller ke beech fasla */
+ }
+
+ /* Nav Menu Bar Styling (Koi change nahi) */
+ .nav-menu {
+     background-color: var(--nav-bg);
+     padding: 15px 20px;
+     border-radius: 50px;
+     border: 2px solid var(--nav-glow);
+     box-shadow: 0 0 15px 0 var(--nav-glow),
+         0 0 30px 0 var(--nav-glow) inset;
+     transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+ }
+
+ .nav-menu ul {
+     list-style: none;
+     display: flex;
+     gap: 30px;
+ }
+
+ .nav-menu ul li a {
+     display: block;
+     color: var(--icon-color);
+     font-size: 2rem;
+     padding: 10px;
+     position: relative;
+     transition: transform 0.3s ease;
+ }
+
+ /* "Anteek" Hover Effect (Koi change nahi) */
+ .nav-menu ul li a:hover {
+     transform: translateY(-10px);
+ }
+
+ .nav-menu ul li a::after {
+     content: '';
+     position: absolute;
+     bottom: -5px;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 8px;
+     height: 8px;
+     border-radius: 50%;
+     background-color: var(--nav-glow);
+     box-shadow: 0 0 10px var(--nav-glow);
+     opacity: 0;
+     transition: opacity 0.3s ease, bottom 0.3s ease;
+ }
+
+ .nav-menu ul li a:hover::after {
+     opacity: 1;
+     bottom: 0px;
+ }
+
+
+ /* --- NAYA: RGB Controller Styling --- */
+ .rgb-controller {
+     display: flex;
+     flex-direction: column;
+     /* Sliders ko vertical stack karein */
+     gap: 15px;
+     /* Sliders ke darmiyan fasla */
+     padding: 20px 25px;
+     background-color: #222;
+     border-radius: 20px;
+     width: 300px;
+     /* Controller ki width */
+     border: 1px solid #444;
+ }
+
+ .slider-group {
+     display: flex;
+     align-items: center;
+     gap: 15px;
+ }
+
+ .slider-group label {
+     color: #fff;
+     font-size: 1.2rem;
+     font-weight: bold;
+     font-family: monospace;
+     width: 20px;
+     /* Takay R, G, B labels align hon */
+ }
+
+ /* Slider ki default styling hatana */
+ input[type="range"] {
+     -webkit-appearance: none;
+     /* Webkit browsers ke liye */
+     appearance: none;
+     flex-grow: 1;
+     /* Slider poori jagah le */
+     height: 8px;
+     background: #444;
+     /* Slider ka track */
+     border-radius: 5px;
+     outline: none;
+     cursor: pointer;
+ }
+
+ /* Slider Thumb Styling (Grip) - Webkit (Chrome, Safari) */
+ input[type="range"]::-webkit-slider-thumb {
+     -webkit-appearance: none;
+     appearance: none;
+     width: 22px;
+     height: 22px;
+     background: var(--nav-glow);
+     /* YEH BHI GLOW COLOR LEGA! */
+     border: 3px solid #fff;
+     border-radius: 50%;
+     cursor: pointer;
+     transition: background 0.3s;
+     /* Color change ko smooth karein */
+ }
+
+ /* Slider Thumb Styling (Grip) - Firefox */
+ input[type="range"]::-moz-range-thumb {
+     width: 22px;
+     height: 22px;
+     background: var(--nav-glow);
+     /* YEH BHI GLOW COLOR LEGA! */
+     border: 3px solid #fff;
+     border-radius: 50%;
+     cursor: pointer;
+     transition: background 0.3s;
+ }
