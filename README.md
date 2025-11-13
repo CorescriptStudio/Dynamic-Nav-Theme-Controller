@@ -1,4 +1,4 @@
-# 🌈 ChromaGlow-Nav | Real-time RGB Controlled Glowing Navigation Menu
+# 🌈 Dynamic-Nav-Theme-Controller | Real-time RGB Controlled Glowing Navigation Menu
 
 
 
